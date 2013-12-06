@@ -1,4 +1,4 @@
-xdretroclock
+xdRetroClock
 ==============
 [Demo&Documentation][doc]
 
