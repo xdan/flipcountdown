@@ -1,0 +1,30 @@
+{
+    "name": "xdretroclock",
+    "title": "jQuery Clock or Timer plugin in retro flip-count down style",
+    "description": "jQuery Clock or Timer plugin in retro flip-count down style",
+    "keywords": [
+        "time",
+        "timer",
+        "clock",
+		"form"
+    ],
+    "version": "1.0.0",
+    "author": {
+		"name": 	"Chupurnov Valeriy",
+		"email": 	"chupurnov@gmail.com",
+		"url": 		"http://xdsoft.net/contacts.html"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/xdan/xdretroclock/blob/master/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/xdan/xdretroclock/issues",
+    "homepage": "http://xdsoft.net/jqplugins/xdretroclock/",
+    "docs": "http://xdsoft.net/jqplugins/xdretroclock/",
+    "download": "https://github.com/xdan/xdretroclock/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}
