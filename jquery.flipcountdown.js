@@ -1,5 +1,5 @@
 /** 
- * @preserve jQuery flipcountdown plugin v2.0.0
+ * @preserve jQuery flipcountdown plugin v2.0.1
  * @homepage http://xdsoft.net/jqplugins/flipcountdown/
  * (c) 2013, Chupurnov Valeriy.
  */
@@ -48,7 +48,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				
 				timer = 0,
 				
-				heightDigit = 77,
+				heightDigit = 52,
 				
 				current = {
 					"h1": -1,
