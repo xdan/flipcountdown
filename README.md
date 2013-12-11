@@ -1,12 +1,12 @@
-xdRetroClock
+flipCountDown
 ==============
 [Demo&Documentation][doc]
 
 
 jQuery Plugin Flip Count Down Retro Clock
 
-xdRetroClock
+flipCountDown
 
 ![ScreenShot](/screen/1.png)
 
-[doc]: http://xdsoft.net/jqplugins/xdretroclock/
+[doc]: http://xdsoft.net/jqplugins/flipcountdown/

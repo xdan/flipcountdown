@@ -3,22 +3,22 @@
 <head>
 <!--<base href="" /><!-- -->
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>jquery.xdRetroClock Demo Flip Count Down Retro Clock </title>
+<title>jquery.flipCountDown Demo Flip Count Down Retro Clock </title>
 <meta name="description" content="retro flip clock plugin for jQuery.">
 <meta name="keywords" content="Плагин jQuery, retro часы, flip часы,jQuery, plugin, count down">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
 <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="jquery.xdretroclock.js"></script>
-<link rel="stylesheet" type="text/css" href="jquery.xdretroclock.css" />
+<script type="text/javascript" src="jquery.flipcountdown.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.flipcountdown.css" />
 <script>
 $(function(){
-	$('#retroclockbox1').xdretroclock();
-	$('#retroclockbox2').xdretroclock({showHour:false,showMinute:false,showSecond:true});
-	$('#retroclockbox3').xdretroclock({tzoneOffset:3,showSecond:false});
-	$('#retroclockbox4').xdretroclock({am:true});
-	$('#retroclockbox5').xdretroclock({speedFlip:50});
-	$('#retroclockbox6').xdretroclock({time:function(){
+	$('#retroclockbox1').flipcountdown();
+	$('#retroclockbox2').flipcountdown({showHour:false,showMinute:false,showSecond:true});
+	$('#retroclockbox3').flipcountdown({tzoneOffset:3,showSecond:false});
+	$('#retroclockbox4').flipcountdown({am:true});
+	$('#retroclockbox5').flipcountdown({speedFlip:50});
+	$('#retroclockbox6').flipcountdown({time:function(){
 		return new Date('5/10/2012 12:34:23');
 	}});
 })
@@ -27,53 +27,76 @@ $(function(){
 <body>
 <div id="main">
 	<header>
-		<h1>jquery.xdRetroClock Plugin</h1>
-		<p><a href="http://xdsoft.net/jqplugins/xdretroclock/">Page project</a>&nbsp;|&nbsp;<a href="https://github.com/xdan/xdretroclock/archive/master.zip">Download</a></p>
+		<h1>jquery.flipCountDown Plugin</h1>
+		<p><a href="http://xdsoft.net/jqplugins/flipcountdown/">Page project</a>&nbsp;|&nbsp;<a href="https://github.com/xdan/flipcountdown/archive/master.zip">Download</a></p>
 		<p>Unusual retro clock count down plugin for jQuery</p>
 	</header>
 	<h2>Fast start</h2>
 	<p>Add in html page</p><pre style="width:535px;">
 &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.xdretroclock.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;jquery.xdretroclock.css&quot; /&gt;</pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.flipcountdown.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;jquery.flipcountdown.css&quot; /&gt;</pre>
 	<p>add div element</p>
 <pre style="width:535px;">&lt;div id=&quot;retroclockbox1&quot;&gt;&lt;/div&gt;</pre>
-	<p>and init xdretroclock</p>
+	<p>and init flipcountdown</p>
 	<pre >$(function(){
-	$('#retroclockbox1').xdretroclock();
+	$('#retroclockbox1').flipcountdown();
 })</pre>
 <p>Result</p>
 <div id="retroclockbox1"></div>
 <h2>Settings</h2>
+<p>- Sizes (use bootstrap sizes notation)</p>
+<pre >$(function(){
+	$(&quot;#retroclockbox1&quot;).flipcountdown({
+		size:&quot;lg&quot;
+	});
+})</pre>
+<div><strong>lg</strong>-large</div>
+<div id="retroclockbox_lg"></div>
+<div><strong>md</strong>-middle, default</div>
+<div id="retroclockbox_md"></div>
+<div><strong>sm</strong>-small</div>
+<div id="retroclockbox_sm"></div>
+<div><strong>xs</strong>-Extra small</div>
+<div id="retroclockbox_xs"></div>
+<script>
+$(function(){
+	$('#retroclockbox_lg').flipcountdown({size:'lg'});
+	$('#retroclockbox_md').flipcountdown({size:'md'});
+	$('#retroclockbox_sm').flipcountdown({size:'sm'});
+	$('#retroclockbox_xs').flipcountdown({size:'xs'});
+})
+</script>
+
 <p>- Hide second or minute or hour</p>
 <pre >$(function(){
-	$('#retroclockbox1').xdretroclock({showHour:false,showMinute:false,showSecond:true});
+	$('#retroclockbox1').flipcountdown({showHour:false,showMinute:false,showSecond:true});
 })</pre>
 <div id="retroclockbox2"></div>
 <p>- offset timezone</p>
 <pre >$(function(){
-	$('#retroclockbox3').xdretroclock({tzoneOffset:3,showSecond:false});
+	$('#retroclockbox3').flipcountdown({tzoneOffset:3,showSecond:false});
 })</pre>
 <div id="retroclockbox3"></div>
 <p>- am,pm format hours</p>
 <pre >$(function(){
-	$('#retroclockbox4').xdretroclock({am:true});
+	$('#retroclockbox4').flipcountdown({am:true});
 })</pre>
 <div id="retroclockbox4"></div>
 <p>- speed animate flip digit (multiply 6 must by less than 1000) default 100</p>
 <pre >$(function(){
-	$('#retroclockbox5').xdretroclock({speedFlip:50});
+	$('#retroclockbox5').flipcountdown({speedFlip:50});
 })</pre>
 <div id="retroclockbox5"></div>
 <p>- set time</p>
 <pre >$(function(){
-	$('#retroclockbox6').xdretroclock({time:function(){
+	$('#retroclockbox6').flipcountdown({time:function(){
 		return new Date('5.10.2012 12:34:23');
 	}});
 })</pre>
 <div id="retroclockbox6"></div>
 <footer>
-	<p>Licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GPL v3</a> Project page <a href="http://xdsoft.net/jqplugins/xdRetroClock/">Link</a> 
+	<p>Licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GPL v3</a> Project page <a href="http://xdsoft.net/jqplugins/flipCountDown/">Link</a> 
 	Author: <a href="http://xdsoft.net/contacts.html">Chupurnov Valeriy</a> (leroy@xdsoft.net)</p>
 </footer>
 <style>
