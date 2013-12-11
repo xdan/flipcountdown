@@ -15,7 +15,7 @@ $(function(){
 	<p>Unusual retro clock count down plugin for jQuery <a href="https://github.com/xdan/flipcountdown/">Source</a> or <a href="https://github.com/xdan/flipcountdown/archive/master.zip">Download</a></p>
 </header>
 <h2>Fast start</h2>
-<p>Add in html page</p><pre><code data-language="javascript">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+<p>Add in html page</p><pre><code data-language="html">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.flipcountdown.js&quot;&gt;&lt;/script&gt;
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;jquery.flipcountdown.css&quot; /&gt;</code></pre>
 	<p>add div element</p>
@@ -29,11 +29,9 @@ $(function(){
 <h2>Settings</h2>
 <hr>
 <p>- Sizes (use bootstrap sizes notation)</p>
-<pre >$(function(){
-	$(&quot;#flipcountdownbox1&quot;).flipcountdown({
-		size:&quot;lg&quot;
-	});
-})</pre>
+<pre><code data-language="javascript">$(&quot;#flipcountdownbox1&quot;).flipcountdown({
+	size:&quot;lg&quot;
+});</code></pre>
 <div><strong>lg</strong>-large</div>
 <div id="flipcountdownbox_lg"></div>
 <div><strong>md</strong>-middle, default</div>
@@ -52,39 +50,29 @@ $(function(){
 </script>
 <hr>
 <p>- Hide second or minute or hour</p>
-<pre><code data-language="javascript">$(function(){
-	$('#flipcountdownbox1').flipcountdown({
-		showHour:false,
-		showMinute:false,
-		showSecond:true
-	});
-})</code></pre>
+<pre><code data-language="javascript">$(&quot;#flipcountdownbox1&quot;).flipcountdown({
+	showHour:false,
+	showMinute:false,
+	showSecond:true
+});</code></pre>
 <div id="flipcountdownbox2"></div>
 <hr>
 <p>- offset timezone</p>
-<pre><code data-language="javascript">$(function(){
-	$('#flipcountdownbox3').flipcountdown({
-		tzoneOffset:3,
-		showSecond:false
-	});
-})</code></pre>
+<pre><code data-language="javascript">$(&quot;#flipcountdownbox3&quot;).flipcountdown({
+	tzoneOffset:3,
+	showSecond:false
+});</code></pre>
 <div id="flipcountdownbox3"></div>
 <hr>
 <p>- 12 format hours</p>
-<pre><code data-language="javascript">$(function(){
-	$('#flipcountdownbox4').flipcountdown({am:true});
-})</code></pre>
+<pre><code data-language="javascript">$(&quot;#flipcountdownbox4&quot;).flipcountdown({am:true});</code></pre>
 <div id="flipcountdownbox4"></div>
 <hr>
 <p>- speed animate flip digit (multiply 6 must by less than 1000) default 100</p>
-<pre><code data-language="javascript">$(function(){
-	$('#flipcountdownbox5').flipcountdown({speedFlip:50});
-})</code></pre>
+<pre><code data-language="javascript">$(&quot;#flipcountdownbox5&quot;).flipcountdown({speedFlip:50});</code></pre>
 <div id="flipcountdownbox5"></div>
 <p>- set time</p>
-<pre><code data-language="javascript">function(){
-	$('#flipcountdownbox6').flipcountdown({time:function(){
-		return new Date('5.10.2012 12:34:23');
-	}});
-})</code></pre>
+<pre><code data-language="javascript">$('#flipcountdownbox6').flipcountdown({time:function(){
+	return new Date('5.10.2012 12:34:23');
+}});</code></pre>
 <div id="flipcountdownbox6"></div>
