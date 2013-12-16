@@ -4,7 +4,7 @@ $(function(){
 	$('#flipcountdownbox2').flipcountdown({showHour:false,showMinute:false,showSecond:true});
 	$('#flipcountdownbox3').flipcountdown({tzoneOffset:3,showSecond:false});
 	$('#flipcountdownbox4').flipcountdown({am:true});
-	$('#flipcountdownbox5').flipcountdown({speedFlip:50});
+	$('#flipcountdownbox5').flipcountdown({speedFlip:30});
 	$('#flipcountdownbox6').flipcountdown({time:function(){
 		return new Date('5/10/2012 12:34:23');
 	}});
@@ -101,8 +101,8 @@ $(function(){
 <pre><code data-language="javascript">$(&quot;#flipcountdownbox4&quot;).flipcountdown({am:true});</code></pre>
 <div id="flipcountdownbox4"></div>
 <hr>
-<p>- speed animate flip digit (multiply 6 must by less than 1000) default 100</p>
-<pre><code data-language="javascript">$(&quot;#flipcountdownbox5&quot;).flipcountdown({speedFlip:50});</code></pre>
+<p>- speed animate flip digit (multiply 6 must by less than 1000) default 60</p>
+<pre><code data-language="javascript">$(&quot;#flipcountdownbox5&quot;).flipcountdown({speedFlip:30});</code></pre>
 <div id="flipcountdownbox5"></div>
 <hr>
 <p>- set time</p>

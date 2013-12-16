@@ -1,5 +1,5 @@
 /** 
- * @preserve jQuery flipcountdown plugin v3.0.0
+ * @preserve jQuery flipcountdown plugin v3.0.1
  * @homepage http://xdsoft.net/jqplugins/flipcountdown/
  * (c) 2013, Chupurnov Valeriy.
  */
@@ -49,7 +49,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				_setMargin = function( box, marginTop, rec, arrow,callback,range){
 					if( marginTop<=-sizes[options.size]*60 )
 						marginTop = -1;
-					box.css('background-position-y',marginTop+'px' );
+					box.css('background-position','0px '+marginTop+'px' );
 					if( rec<=6 ){
 						setTimeout(function(){
 							_setMargin(box, marginTop-arrow*sizes[options.size], ++rec, arrow, callback,range);	
