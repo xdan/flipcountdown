@@ -1,5 +1,5 @@
 /** 
- * @preserve jQuery flipcountdown plugin v3.0.1
+ * @preserve jQuery flipcountdown plugin v3.0.2
  * @homepage http://xdsoft.net/jqplugins/flipcountdown/
  * (c) 2013, Chupurnov Valeriy.
  */
