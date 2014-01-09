@@ -1,5 +1,5 @@
 /** 
- * @preserve jQuery flipcountdown plugin v3.0.2
+ * @preserve jQuery flipcountdown plugin v3.0.4
  * @homepage http://xdsoft.net/jqplugins/flipcountdown/
  * (c) 2013, Chupurnov Valeriy.
  */
@@ -20,15 +20,17 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 			autoUpdate	:true,
 			size		:'md'
 		},
+		
 		sizes = {
 			lg:77,
 			md:52,
 			sm:35,
 			xs:24
 		},
+		
 		createFlipCountDown = function( $box ){
-			var flipcountdown 	= $('<div class="xdsoft_flipcountdown"></div>'),
-				clearex 		= $('<div class="xdsoft_clearex"></div>'),	 
+			var $flipcountdown 	= $('<div class="xdsoft_flipcountdown"></div>'),
+				$clearex 		= $('<div class="xdsoft_clearex"></div>'),	 
 				
 				options = $.extend({},default_options),
 				
@@ -46,6 +48,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 						_animateOne(box,a+arrow,arrow,range-1);
 					},range);
 				},
+				
 				_setMargin = function( box, marginTop, rec, arrow,callback,range){
 					if( marginTop<=-sizes[options.size]*60 )
 						marginTop = -1;
@@ -57,7 +60,9 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 					}else
 						callback();
 				},
+				
 				blocks = [],
+				
 				_typeCompare	= 	function ( a,b ){
 					return 	a&&b&&(
 								(a==b)||
@@ -65,13 +70,14 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 								(/^[:.\s]+$/.test(a+''+b))
 							);
 				},
+				
 				_generate = function( chars ){
 					if( !(chars instanceof Array) || !chars.length )
 						return false;
 					for( var i = 0, n = chars.length;i<n;i++ ){
 						if( !blocks[i] ){
 							blocks[i] = $('<div class="xdsoft_digit"></div>');
-							clearex.before(blocks[i]);
+							$clearex.before(blocks[i]);
 						}
 						if( blocks[i].data('value')!=chars[i] ){
 							if( !_typeCompare(blocks[i].data('value'),chars[i]) ){
@@ -85,7 +91,6 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 								}
 							}
 							if( !isNaN(chars[i]) ){
-								//_setMargin(blocks[i],_getmt(parseInt(chars[i])),1);
 								var old = parseInt(blocks[i].data('value')), 
 									ii = parseInt(blocks[i].data('i')),
 									crnt = parseInt(chars[i]);
@@ -107,7 +112,9 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 					}
 					
 				},
+				
 				counter = 0,
+				
 				_calcMoment = function(){
 					var value = '1',chars = [];
 					if(options.tick)
@@ -150,8 +157,8 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 					}
 				};
 				
-			flipcountdown
-				.append(clearex)
+			$flipcountdown
+				.append($clearex)
 				.on('xdinit.xdsoft',function(){
 					clearInterval(timer);
 					if( options.autoUpdate )
@@ -163,11 +170,11 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				options = $.extend({},options,_options);
 				if( !sizes[options.size] )
 					options.size = 'lg';
-				flipcountdown
+				$flipcountdown
 					.addClass('xdsoft_size_'+options.size)
 					.trigger('xdinit.xdsoft');
 			});
-			$box.append(flipcountdown);
+			$box.append($flipcountdown);
 		};	
 	return this.each(function(){
 		var $box = $(this);

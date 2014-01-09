@@ -16,12 +16,12 @@ $(function(){
 </header>
 <hr>
 <h2>Until the new year left</h2>
-<table style="border:0px;">
+<table id="until_the_new_year_left" style="border:0px;">
 	<tr>
 		<td style="width:110px;text-align:center;"><strong>Days</strong></td>
 		<td style="width:120px;text-align:center;"><strong>Hours</strong></td>
 		<td style="width:110px;text-align:center;"><strong>Minutes</strong></td>
-		<td style="width:120px;text-align:center;"><strong>Seconds</strong></td>
+		<td style="width:130px;text-align:center;"><strong>Seconds</strong></td>
 	</tr>
 	<tr>
 		<td colspan="4"><span id="new_year"></span></td>
@@ -29,7 +29,7 @@ $(function(){
 </table>
 <script>
 $(function(){
-	var NY = Math.round((new Date('1/01/2014 00:00:01')).getTime()/1000);
+	var NY = Math.round((new Date('1/01/2015 00:00:01')).getTime()/1000);
 	$('#new_year').flipcountdown({	
 		size:'lg',
 		tick:function(){
@@ -144,7 +144,7 @@ $(function(){
 <hr>
 <p> - Until The New Year Example</p>
 <pre><code data-language="javascript">$(function(){
- var NY = Math.round((new Date(&#39;1/01/2014 00:00:01&#39;)).getTime()/1000);
+ var NY = Math.round((new Date(&#39;1/01/2015 00:00:01&#39;)).getTime()/1000);
  $(&#39;#new_year&#39;).flipcountdown({	
 	size:&#39;lg&#39;,
 	tick:function(){
@@ -161,3 +161,5 @@ $(function(){
 	}
  });
 });</code></pre>
+
+<a href="#until_the_new_year_left">The result on the top of the page</a>
