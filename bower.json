@@ -7,7 +7,7 @@
 	],
 	"ignore": [
 		"**/screen",
-		"**/datetimepicker.jquery.json",
+		"**/flipcountdown.jquery.json",
 		"**/screen/*.png",
 		"**/img/*.psd",
 		"**/*.txt",
