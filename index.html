@@ -12,7 +12,7 @@
 <script type="text/javascript" src="jquery.flipcountdown.js"></script>
 <link rel="stylesheet" type="text/css" href="jquery.flipcountdown.css" />
 <script>
-$(function(){
+jQuery(function($){
 	var i = 1000;
 	$('#retroclockbox1').flipcountdown();
 	var i = 1;
@@ -53,7 +53,7 @@ $(function(){
 	
 	
 	<script>
-	$(function(){
+	jQuery(function($){
 		var NY = Math.round((new Date('1/01/2015 00:00:01')).getTime()/1000);
 		$('#new_year').flipcountdown({
 			tick:function(){
@@ -79,14 +79,14 @@ $(function(){
 	<p>add div element</p>
 <pre style="width:535px;">&lt;div id=&quot;retroclockbox1&quot;&gt;&lt;/div&gt;</pre>
 	<p>and init flipcountdown</p>
-	<pre >$(function(){
+	<pre >jQuery(function($){
 	$('#retroclockbox1').flipcountdown();
 })</pre>
 <p>Result</p>
 <div id="retroclockbox1"></div>
 <h2>Settings</h2>
 <p>- Sizes (use bootstrap sizes notation)</p>
-<pre >$(function(){
+<pre >jQuery(function($){
 	$(&quot;#retroclockbox1&quot;).flipcountdown({
 		size:&quot;lg&quot;
 	});
@@ -100,7 +100,7 @@ $(function(){
 <div><strong>xs</strong>-Extra small</div>
 <div id="retroclockbox_xs"></div>
 <script>
-$(function(){
+jQuery(function($){
 	$('#retroclockbox_lg').flipcountdown({size:'lg'});
 	$('#retroclockbox_md').flipcountdown({size:'md'});
 	$('#retroclockbox_sm').flipcountdown({size:'sm'});
@@ -109,7 +109,7 @@ $(function(){
 </script>
 
 <p>- Counter</p>
-<pre>$(function(){
+<pre>jQuery(function($){
 	var i = 1;
 	$(&#39;#retroclockbox_counter&#39;).flipcountdown({
 		tick:function(){
@@ -123,32 +123,32 @@ $(function(){
 <pre>$('#retroclockbox_float').flipcountdown({size:'lg',tick:22.3434});</pre>
 <div id="retroclockbox_float"></div>
 <script>
-$(function(){
+jQuery(function($){
 	$('#retroclockbox_float').flipcountdown({size:'lg',tick:22.3434});
 });
 </script>
 <p>- Hide second or minute or hour</p>
-<pre >$(function(){
+<pre >jQuery(function($){
 	$('#retroclockbox1').flipcountdown({showHour:false,showMinute:false,showSecond:true});
 })</pre>
 <div id="retroclockbox2"></div>
 <p>- offset timezone</p>
-<pre >$(function(){
+<pre >jQuery(function($){
 	$('#retroclockbox3').flipcountdown({tzoneOffset:3,showSecond:false});
 })</pre>
 <div id="retroclockbox3"></div>
 <p>- am,pm format hours</p>
-<pre >$(function(){
+<pre >jQuery(function($){
 	$('#retroclockbox4').flipcountdown({am:true});
 })</pre>
 <div id="retroclockbox4"></div>
 <p>- speed animate flip digit (multiply 6 must by less than 1000) default 100</p>
-<pre >$(function(){
+<pre >jQuery(function($){
 	$('#retroclockbox5').flipcountdown({speedFlip:50});
 })</pre>
 <div id="retroclockbox5"></div>
 <p>- set time</p>
-<pre >$(function(){
+<pre >jQuery(function($){
 	$('#retroclockbox6').flipcountdown({time:function(){
 		return new Date('5.10.2012 12:34:23');
 	}});
