@@ -54,9 +54,11 @@ jQuery(function($){
 	
 	<script>
 	jQuery(function($){
-		var NY = Math.round((new Date('1/01/2015 00:00:01')).getTime()/1000);
+		//var NY = Math.round((new Date('1/01/2015 00:00:01')).getTime()/1000);
 		$('#new_year').flipcountdown({
-			tick:function(){
+			size:'lg',
+			beforeDateTime:'1/01/2015 00:00:01'
+			/*tick:function(){
 				var nol = function(h){
 					return h>9?h:'0'+h;
 				}
@@ -67,7 +69,7 @@ jQuery(function($){
 					min		= parseInt(((range%secday)%sechour)/60),
 					sec		= ((range%secday)%sechour)%60;
 				return nol(days)+' '+nol(hours)+' '+nol(min)+' '+nol(sec);
-			}
+			}*/
 		});
 	});
 	</script>

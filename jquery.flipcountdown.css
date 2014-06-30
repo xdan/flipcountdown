@@ -19,13 +19,13 @@
 .xdsoft_flipcountdown.xdsoft_size_lg >.xdsoft_digit.xdsoft_separator,
 .xdsoft_flipcountdown.xdsoft_size_lg >.xdsoft_digit.xdsoft_dot{
 	width:14px;
-	background-position:-19px -4620px;
+	background-position:-19px -5082px;
 }
 .xdsoft_flipcountdown.xdsoft_size_lg >.xdsoft_digit.xdsoft_dot{
-	background-position:-41px -4620px;
+	background-position:-41px -5082px;
 }
 .xdsoft_flipcountdown.xdsoft_size_lg >.xdsoft_digit.xdsoft_space{
-	background-position:-100px -4620px;
+	background-position:-100px -5082px;
 }
 
 .xdsoft_flipcountdown.xdsoft_size_md >.xdsoft_digit{
@@ -37,7 +37,7 @@
 .xdsoft_flipcountdown.xdsoft_size_md >.xdsoft_digit.xdsoft_separator,
 .xdsoft_flipcountdown.xdsoft_size_md >.xdsoft_digit.xdsoft_dot{
 	width:10px;
-	background-position:-13px -3120px;
+	background-position:-13px -3432px;
 }
 .xdsoft_flipcountdown.xdsoft_size_sm >.xdsoft_digit{
 	width:24px; 
@@ -48,7 +48,7 @@
 .xdsoft_flipcountdown.xdsoft_size_sm >.xdsoft_digit.xdsoft_separator,
 .xdsoft_flipcountdown.xdsoft_size_sm >.xdsoft_digit.xdsoft_dot{
 	width:10px;
-	background-position:-6px -2100px;
+	background-position:-6px -2310px;
 }
 .xdsoft_flipcountdown.xdsoft_size_xs >.xdsoft_digit{
 	width:16px; 
@@ -59,5 +59,5 @@
 .xdsoft_flipcountdown.xdsoft_size_xs >.xdsoft_digit.xdsoft_separator,
 .xdsoft_flipcountdown.xdsoft_size_xs >.xdsoft_digit.xdsoft_dot{
 	width:5px;
-	background-position:-5px -1440px;
+	background-position:-5px -1584px;
 }

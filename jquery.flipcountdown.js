@@ -1,5 +1,5 @@
 /** 
- * @preserve jQuery flipcountdown plugin v3.0.4
+ * @preserve jQuery flipcountdown plugin v3.0.5
  * @homepage http://xdsoft.net/jqplugins/flipcountdown/
  * (c) 2013, Chupurnov Valeriy.
  */
@@ -18,8 +18,16 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 							return new Date();
 						},
 			autoUpdate	:true,
-			size		:'md'
+			size		:'md',
+			
+			beforeDateTime:false,
+			
+			prettyPrint :function( chars ){
+				return (chars instanceof Array)?chars.join(' '):chars;
+			}
 		},
+		
+		digitsCount = 66,
 		
 		sizes = {
 			lg:77,
@@ -37,21 +45,25 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				timer = 0,
 				
 				_animateRange = function( box,a,b ){
-					_animateOne( box,a,(a>b&&!(a==9&&b==0))?-1:1,!(a==9&&b==0)?Math.abs(a-b):1 );
+					if( !isNaN(a) ){
+						_animateOne( box,a,((a>b && !(a==9&&b==0) )||(a==0&&b==9))?-1:1,!((a==9&&b==0)||(a==0&&b==9))?Math.abs(a-b):1 );
+					}else{
+						box.css('background-position','0px -'+((b+1)*6*sizes[options.size]+1)+'px' );
+					}
 				},
 				
 				_animateOne = function( box,a,arrow,range ){
 					if( range<1 )
 						return;
 	
-					_setMargin(box,-(a*6*sizes[options.size]+1),1,arrow,function(){
+					_setMargin(box,-((a+1)*6*sizes[options.size]+1),1,arrow,function(){
 						_animateOne(box,a+arrow,arrow,range-1);
 					},range);
 				},
 				
 				_setMargin = function( box, marginTop, rec, arrow,callback,range){
-					if( marginTop<=-sizes[options.size]*60 )
-						marginTop = -1;
+					if( marginTop<=-sizes[options.size]*digitsCount )
+						marginTop = -(6*sizes[options.size]+1);
 					box.css('background-position','0px '+marginTop+'px' );
 					if( rec<=6 ){
 						setTimeout(function(){
@@ -94,9 +106,6 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 								var old = parseInt(blocks[i].data('value')), 
 									ii = parseInt(blocks[i].data('i')),
 									crnt = parseInt(chars[i]);
-								if( isNaN(old)||i!=ii ){
-									old = (crnt-1)<0?9:crnt-1;
-								}
 								_animateRange(blocks[i],old,crnt);
 							}
 							blocks[i].data('value',chars[i]);
@@ -118,7 +127,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				_calcMoment = function(){
 					var value = '1',chars = [];
 					if(options.tick)
-						value = (options.tick instanceof Function)?options.tick.call($box,counter):options.tick;
+						value = options.prettyPrint.call($box,(options.tick instanceof Function)?options.tick.call($box,counter):options.tick);
 					
 					if( typeof value!=='undefined' ){
 						switch( value.constructor ){
@@ -156,7 +165,9 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 						_generate(chars);
 					}
 				};
-				
+			
+			
+			
 			$flipcountdown
 				.append($clearex)
 				.on('xdinit.xdsoft',function(){
@@ -167,9 +178,32 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				});
 				
 			$box.data('setOptions',function( _options ){
-				options = $.extend({},options,_options);
+				options = $.extend(true,{},options,_options);
 				if( !sizes[options.size] )
-					options.size = 'lg';
+					options.size = defaulOptions.size;
+					
+				if( options.beforeDateTime && !_options.tick ){
+					if( typeof(options.beforeDateTime) == 'string' )
+						options.beforeDateTime = Math.round((new Date(options.beforeDateTime)).getTime()/1000);
+					else{
+						if ( Object.prototype.toString.call(options.beforeDateTime) !== "[object Date]" )
+							options.beforeDateTime = Math.round((new Date()).getTime()/1000)+365*24*60;
+					}
+					var nol = function(h){
+						return h>9?h:'0'+h;
+					}
+					
+					options.tick = function(){
+						var	range  	= options.beforeDateTime-Math.round((new Date()).getTime()/1000),
+							secday = 86400, sechour = 3600,
+							days 	= parseInt(range/secday),
+							hours	= parseInt((range%secday)/sechour),
+							min		= parseInt(((range%secday)%sechour)/60),
+							sec		= ((range%secday)%sechour)%60;
+						return [nol(days),nol(hours),nol(min),nol(sec)];
+					}
+				}
+				
 				$flipcountdown
 					.addClass('xdsoft_size_'+options.size)
 					.trigger('xdinit.xdsoft');
