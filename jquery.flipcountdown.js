@@ -194,7 +194,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 					}
 					
 					options.tick = function(){
-						var	range  	= options.beforeDateTime-Math.round((new Date()).getTime()/1000),
+						var	range  	=  Math.max(0,options.beforeDateTime-Math.round((new Date()).getTime()/1000)),
 							secday = 86400, sechour = 3600,
 							days 	= parseInt(range/secday),
 							hours	= parseInt((range%secday)/sechour),
