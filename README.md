@@ -1,5 +1,7 @@
 flipCountDown
 ==============
+[![CDNJS](https://img.shields.io/cdnjs/v/flipcountdown.svg)](https://cdnjs.com/libraries/flipcountdown/)
+
 [Demo&Documentation][doc]
 
 
