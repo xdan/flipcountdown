@@ -133,6 +133,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 						switch( value.constructor ){
 							case Date:
 								var h = (value.getHours()+options.tzoneOffset)%(options.am?12:24);
+								h = (options.am && h == 0) ? 12 : h;
 		
 								if( options.showHour ){
 									chars.push(parseInt(h/10));
