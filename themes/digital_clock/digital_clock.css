@@ -1,0 +1,51 @@
+.xdsoft_flipcountdown.xdsoft_size_lg.digital_clock>.xdsoft_digit{
+	width:53px; 
+	height:76px;
+	background-image:url('digital-clock-lg.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_lg.digital_clock >.xdsoft_digit.xdsoft_space,
+.xdsoft_flipcountdown.xdsoft_size_lg.digital_clock >.xdsoft_digit.xdsoft_separator,
+.xdsoft_flipcountdown.xdsoft_size_lg.digital_clock >.xdsoft_digit.xdsoft_dot{
+	width:14px;
+	background-position:-19px -5082px;
+}
+.xdsoft_flipcountdown.xdsoft_size_lg.digital_clock >.xdsoft_digit.xdsoft_dot{
+	background-position:-40px -5082px;
+}
+.xdsoft_flipcountdown.xdsoft_size_lg.digital_clock >.xdsoft_digit.xdsoft_space{
+	background-position:-20px -5082px;
+}
+
+.xdsoft_flipcountdown.xdsoft_size_md.digital_clock >.xdsoft_digit{
+	width:36px; 
+	height:51px;
+	background-image:url('digital-clock-md.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_md.digital_clock >.xdsoft_digit.xdsoft_space,
+.xdsoft_flipcountdown.xdsoft_size_md.digital_clock >.xdsoft_digit.xdsoft_separator,
+.xdsoft_flipcountdown.xdsoft_size_md.digital_clock >.xdsoft_digit.xdsoft_dot{
+	width:10px;
+	background-position:-13px -3432px;
+}
+.xdsoft_flipcountdown.xdsoft_size_sm.digital_clock >.xdsoft_digit{
+	width:24px; 
+	height:34px;
+	background-image:url('digital-clock-sm.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_sm.digital_clock >.xdsoft_digit.xdsoft_space,
+.xdsoft_flipcountdown.xdsoft_size_sm.digital_clock >.xdsoft_digit.xdsoft_separator,
+.xdsoft_flipcountdown.xdsoft_size_sm.digital_clock >.xdsoft_digit.xdsoft_dot{
+	width:10px;
+	background-position:-6px -2310px;
+}
+.xdsoft_flipcountdown.xdsoft_size_xs.digital_clock >.xdsoft_digit{
+	width:16px; 
+	height:23px;
+	background-image:url('digital-clock-xs.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_xs.digital_clock >.xdsoft_digit.xdsoft_space,
+.xdsoft_flipcountdown.xdsoft_size_xs.digital_clock >.xdsoft_digit.xdsoft_separator,
+.xdsoft_flipcountdown.xdsoft_size_xs.digital_clock >.xdsoft_digit.xdsoft_dot{
+	width:5px;
+	background-position:-5px -1584px;
+}

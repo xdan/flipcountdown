@@ -19,6 +19,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 						},
 			autoUpdate	:true,
 			size		:'md',
+			theme		:'',
 			
 			beforeDateTime:false,
 			
@@ -206,6 +207,7 @@ jQuery.fn.flipCountDown = jQuery.fn.flipcountdown = function( _options ){
 				
 				$flipcountdown
 					.addClass('xdsoft_size_'+options.size)
+					.addClass(options.theme)
 					.trigger('xdinit.xdsoft');
 			});
 			$box.append($flipcountdown);

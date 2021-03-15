@@ -1,4 +1,7 @@
-.xdsoft_flipcountdown{display:inline-block;}
+ @import "themes/white/white.css";
+ @import "themes/digital_clock/digital_clock.css";
+ 
+ .xdsoft_flipcountdown{display:inline-block;}
 
 .xdsoft_flipcountdown .xdsoft_digit{float:left;background-repeat:no-repeat;}
 .xdsoft_flipcountdown .xdsoft_clearex{clear:both;float:none;}

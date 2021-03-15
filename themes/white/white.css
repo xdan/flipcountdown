@@ -1,0 +1,13 @@
+
+.xdsoft_flipcountdown.xdsoft_size_lg.white>.xdsoft_digit{
+	background-image:url('digit-white-lg.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_md.white>.xdsoft_digit{
+	background-image:url('digit-white-md.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_sm.white>.xdsoft_digit{
+	background-image:url('digit-white-sm.png');
+}
+.xdsoft_flipcountdown.xdsoft_size_xs.white>.xdsoft_digit{
+	background-image:url('digit-white-xs.png');
+}
